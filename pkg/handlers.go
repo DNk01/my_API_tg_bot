@@ -43,7 +43,7 @@ func (b *Bot) handleTempCommand(message *tgbotapi.Message) error{
 	}
 	message.Text = message.Text[6:]
 	log.Println(message.Text)
-	resp, err := http.Get("https://api.openweathermap.org/data/2.5/weather?q=" + message.Text + "&APPID=4b106504c938739971ea66f159abff1d&units=metric")
+	resp, err := http.Get("https://api.openweathermap.org/data/2.5/weather?q=" + message.Text + "&APPID=<TOKEN>&units=metric")
 	log.Println(err)
 	if err != nil {
 		log.Println(err)
